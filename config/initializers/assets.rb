@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += %w( cover.css )
+Rails.application.config.assets.precompile += %w( home/itravel.css )

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'country/index'
+
   get 'itravel/home'
   root 'itravel#home'
 

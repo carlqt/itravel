@@ -1,4 +1,21 @@
-
-%h1 Itravel#home
-%p
-  Find me in app/viwes/itravel/home
+.site-wrapper
+  .site-wrapper-inner
+    .cover-container
+      .masthead.clearfix
+        .inner
+          %h3.masthead-brand Cover
+          %ul.nav.masthead-nav
+            %li.active
+              %a{:href => "#"} Home
+            %li
+              %a{:href => "#"} Features
+            %li
+              %a{:href => "#"} Contact
+      .inner.cover
+        %h1.cover-heading iTravel.
+        %p.lead 
+          Put something here describing what iTravel can do to you travelling needs. You can create and share your itinerary from different places in our quick generate templates.
+        %p.lead
+          = link_to "Get Started", country_index_path, class: 'btn btn-lg btn-default'
+      .mastfoot
+        .inner
