@@ -1,0 +1,12 @@
+.container
+  %h1 Add attraction 
+  %p Choose your country
+  = form_for @country, url: attractions_create_path do |f|
+    = f.select :id, options_from_collection_for_select(@countries, 'id', 'name')
+    .row
+      = f.fields_for :attractions do |a|
+        = a.label :name
+        = a.text_field :name
+        %br
+        = a.label :description
+        = a.text_area :description

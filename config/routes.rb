@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'country/index'
+  get 'attractions/new'
+  post 'attractions/create'
 
   get 'itravel/home'
   root 'itravel#home'
