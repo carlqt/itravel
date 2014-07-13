@@ -1,4 +1,4 @@
 .container
   %h1 Country#index
-  %p Find me in app/views/country/index.html.haml
+  %p Choose your country
   = select_tag "country", options_from_collection_for_select(@countries, 'id', 'name')
