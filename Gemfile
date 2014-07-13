@@ -37,6 +37,7 @@ group :development, :test do
   gem 'xray-rails'
   gem 'pry-rails'
   gem 'rspec', '~> 2.0'
+  gem 'rspec-rails'
   gem 'capybara'
   gem 'puma'
   gem 'haml-rails'
