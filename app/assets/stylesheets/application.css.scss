@@ -16,3 +16,12 @@
 
 @import "bootstrap";
 @import "bootstrap-sprockets";
+
+
+.message-alerts {
+  margin-top: 15px;
+
+  p {
+    padding: 20px;
+  }
+}

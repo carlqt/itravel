@@ -12,7 +12,7 @@
         - elsif flash[:notice]
           %p.bg-warning= flash.notice
         - elsif flash[:success]
-          %p.bg-success= flash.success
+          %p.bg-success= flash[:success]
 
     = yield
     = javascript_include_tag 'application'
