@@ -5,5 +5,14 @@
     = stylesheet_link_tag    'application'
     = csrf_meta_tags
   %body
+    .container
+      .message-alerts
+        - if flash[:alert]
+          %p.bg-danger= flash.alert
+        - elsif flash[:notice]
+          %p.bg-warning= flash.notice
+        - elsif flash[:success]
+          %p.bg-success= flash.success
+
     = yield
     = javascript_include_tag 'application'

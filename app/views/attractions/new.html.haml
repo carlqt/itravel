@@ -1,7 +1,7 @@
 .container
   %h1 Add attraction 
   .row
-    = form_for :attractions, url: attractions_create_path do |f|
+    = form_for :attraction, url: attractions_create_path do |f|
       .form-group
         = label_tag 'country', "Select country", for: "country"
         = select_tag "country", options_from_collection_for_select(@countries, 'id', 'name'), class: "form-control"
@@ -13,3 +13,4 @@
         = f.text_area :description, class: "form-control"
       .form-group
         = submit_tag "Submit", class: "btn btn-primary"
+
