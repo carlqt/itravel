@@ -7,14 +7,19 @@ class AttractionsController < ApplicationController
 
   def create
     build_data(params)
-    if @country.save
+
+    @country.transaction do 
+      if @country.save
+        @photo = @attraction.photos.create!(params[:photo])
       flash[:success] = "Attraction added"
       redirect_to attractions_new_path 
-    else
-      flash[:alert] = "Error in adding attraction"
-      @countries = Country.all
-      render :new
+      else
+        flash[:alert] = "Error in adding attraction"
+        @countries = Country.all
+        render :new
+      end  
     end
+      
   end
 
   private
@@ -25,6 +30,6 @@ class AttractionsController < ApplicationController
   end
 
   def attraction_params
-    params.require(:attraction).permit(:name, :description)
+    params.require(:attraction).permit(:name, :description, photos_attribute: [:picture])
   end
 end

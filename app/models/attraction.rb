@@ -13,6 +13,8 @@
 class Attraction < ActiveRecord::Base
   belongs_to :country
   has_many :users, through: :itineraries
+  has_many :photos
 
   validates :name, :description, presence: true
+  accepts_nested_attributes_for :photos
 end

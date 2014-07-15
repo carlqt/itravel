@@ -12,5 +12,8 @@
         = f.label :description
         = f.text_area :description, class: "form-control"
       .form-group
+        = f.fields_for :photo do |p|
+          = p.label :picture
+          = p.file_field :picture
+      .form-group
         = submit_tag "Submit", class: "btn btn-primary"
-
