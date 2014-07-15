@@ -11,8 +11,8 @@ class AttractionsController < ApplicationController
     @country.transaction do 
       if @country.save
         @photo = @attraction.photos.create!(params[:photo])
-      flash[:success] = "Attraction added"
-      redirect_to attractions_new_path 
+        flash[:success] = "Attraction added"
+        redirect_to attractions_new_path 
       else
         flash[:alert] = "Error in adding attraction"
         @countries = Country.all
@@ -20,6 +20,9 @@ class AttractionsController < ApplicationController
       end  
     end
       
+  end
+
+  def show
   end
 
   private
