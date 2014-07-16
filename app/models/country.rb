@@ -10,5 +10,4 @@
 
 class Country < ActiveRecord::Base
   has_many :attractions
-  accepts_nested_attributes_for :attractions
 end
