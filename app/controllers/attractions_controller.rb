@@ -21,6 +21,7 @@ class AttractionsController < ApplicationController
   end
 
   def show
+    @attn = Attraction.find params[:id]
   end
 
   private
