@@ -8,16 +8,18 @@ class AttractionsController < ApplicationController
 
   def create
     # build_data(params)
+    attraction = Attraction.new(attraction_params)
 
-    if Attraction.create(attraction_params)
+    if attraction.save
       flash[:success] = "Attraction added"
-      redirect_to attractions_new_path 
+      redirect_to attractions_new_path
     else
       flash[:alert] = "Error in adding attraction"
       @countries = Country.all
+      @attraction = Attraction.new
       render :new
-    end  
-      
+    end
+
   end
 
   def show

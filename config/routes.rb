@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'country/index'
+  resources :countries, only: [:index, :new]
   get 'attractions/new'
   post 'attractions/create'
   get 'attractions/:id' => 'attractions#show'

@@ -34,20 +34,21 @@ gem 'autoprefixer-rails'
 gem 'kaminari'
 gem 'carrierwave'
 
-group :development, :test do 
+group :development, :test do
   gem 'pry'
-  gem 'pry-debugger'
+  gem 'byebug'
+  # gem 'pry-debugger'
   gem 'annotate'
   gem 'xray-rails'
   gem 'pry-rails'
-  gem 'rspec', '~> 2.0'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'puma'
   gem 'haml-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
-  
+  gem 'pry-theme'
+
 end
 
 # Use ActiveModel has_secure_password
